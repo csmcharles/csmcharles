@@ -1,0 +1,24 @@
+{
+  "name": "csmcharles",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "ejs": "^2.5.7",
+    "dotenv": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csmcharles/csmcharles.git"
+  },
+  "author": "caleb charles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csmcharles/csmcharles/issues"
+  },
+  "homepage": "https://github.com/csmcharles/csmcharles#readme"
+}
