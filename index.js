@@ -19,6 +19,10 @@ app.engine('ect', ectRenderer.render);
 app.use(express.static(__dirname + '/public'));
 app.use('/', routes);
 
+setInterval(() => {
+    http.get('http://csmcharles.herokuapp.com');
+}, 900000);
+
 app.listen(port, () => {
     console.log('Our app is running on http://localhost:' + port);
 });
