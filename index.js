@@ -3,6 +3,9 @@ require('dotenv').load();
 const express = require('express');
 const app = express();
 
+const ECT = require('ect');
+const ectRenderer = ECT({ watch: true, root: __dirname + '/views', ext : '.ect' });
+
 const routes = require('./routes/routes');
 
 // set the port of our application
@@ -10,7 +13,9 @@ const routes = require('./routes/routes');
 const port = process.env.PORT || 8000;
 
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+app.set('view engine', 'ect');
+app.engine('ect', ectRenderer.render);
+
 app.use(express.static(__dirname + '/public'));
 app.use('/', routes);
 
